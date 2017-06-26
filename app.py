@@ -24,7 +24,7 @@ def webhook():
   sentence = data['text']
 
 #############################################
-  if "dorm" or "domrmitory" in sentence.lower():
+  if "dorm" in sentence.lower():
            msg = "*Residence Hall"
            send_message(msg)
 
