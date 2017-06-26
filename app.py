@@ -24,17 +24,10 @@ def webhook():
   sentence = data['text']
 
 #############################################
-  if data['name'] != 'Satania Bot':
-    if "no" in sentence.lower():
-           msg = "no u"
+  if "dorm" or "domrmitory" in sentence.lower():
+           msg = "*Residence Hall"
            send_message(msg)
-    if "911" in data['text']:
-           msg = '911'
-           send_message(msg)
-  if data['text'] == '!lasagna':
-    num = random.randint(0,len(satania)-1)
-    msg = satania[num]
-    send_message(msg)
+
 
 
 #########################################
