@@ -22,10 +22,17 @@ def webhook():
   if "dorm" in sentence.lower():
            msg = "*Residence Hall"
            send_message(msg)
+  if "lunch" in sentence.lower():
+           msg = "Is it on the PCard?"
+           send_message(msg)
+  if "dinner" in sentence.lower():
+          msg = "Is it on the PCard?"
+          send_message(msg)
   if sentence == '!catfacts':
     num = random.randint(0, (len(catfacts)-1))
     msg = catfacts[num]
     send_message(msg)
+    
 
 
 
