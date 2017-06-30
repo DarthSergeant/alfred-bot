@@ -1,5 +1,11 @@
 import random
 from database.cat_facts import catfacts
+import os
+import sys
+import json
+from urllib.parse import urlencode
+from urllib.request import Request, urlopen
+from flask import Flask, request
 
 def create_response(sentence):
     msg = {}
