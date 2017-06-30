@@ -29,17 +29,14 @@ def create_response(sentence):
     if sentence == '!catfacts':
         num = random.randint(0, (len(catfacts)-1))
         msg = catfacts[num]
-        send_message(msg)
 
     #Responses    
     if "lunch" in sentence.lower():
-        msg = "Is it on the PCard?"
-        send_message(msg)
+        msg = "Is it on the PCard?"    
     if "dinner" in sentence.lower():
         msg = "Is it on the PCard?"
-        send_message(msg)
+       
     if "dorm" in sentence.lower():
         msg = "*Residence Hall"
-        send_message(msg)
 
     return msg
