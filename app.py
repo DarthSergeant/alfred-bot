@@ -15,9 +15,10 @@ def webhook():
   log('Recieved {}'.format(data))
   parse = data['text']
   sentence = parse.lower()
-
-  if sentence == "!TTW":
-      send_message(TTW)
+  response = create_response(sentence)
+  if response:
+    if data['name'] != "Marco Bot":
+      send_message(response)
   return "ok", 200
 
 def send_message(msg):
