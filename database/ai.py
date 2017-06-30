@@ -8,9 +8,9 @@ def create_response(sentence):
         HY = PACK
         msg = PACK
     if sentence == "!BUS":
-        msg = BUS
+        msg = "Buskirk"
     if sentence == "!TTW":
-        msg = TTW
+        msg = str(TTW)
     if sentence == "!TTE":
         msg = TTE
     if sentence == "!FYN":
