@@ -5,7 +5,7 @@ def create_response(sentence):
     msg = {}
     #Residence Halls
     if sentence == "!hy":
-        str(HY) = PACK
+        HY = PACK
         msg = PACK
     if sentence == "!bus":
         msg = "Buskirk"
