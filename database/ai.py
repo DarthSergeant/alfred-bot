@@ -4,14 +4,14 @@ from database.cat_facts import catfacts
 def create_response(sentence):
     msg = {}
     #Residence Halls
-    if sentence == "!HY":
+    if sentence == "!hy":
         HY = PACK
         msg = PACK
     if sentence == "!bus":
         msg = "Buskirk"
-    if sentence == "!TTW":
+    if sentence == "!ttw":
         msg = str(TTW)
-    if sentence == "!TTE":
+    if sentence == "!tte":
         msg = TTE
     if sentence == "!FYN":
         msg = FYN
