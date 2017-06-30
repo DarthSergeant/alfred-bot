@@ -7,7 +7,7 @@ def create_response(sentence):
     if sentence == "!HY":
         HY = PACK
         msg = PACK
-    if sentence == "!BUS":
+    if sentence == "!bus":
         msg = "Buskirk"
     if sentence == "!TTW":
         msg = str(TTW)
@@ -31,9 +31,6 @@ def create_response(sentence):
         num = random.randint(0, (len(catfacts)-1))
         msg = catfacts[num]
                        
-    if sentence == "!GIB":
-        msg = GIB
-
     #Responses    
     if "lunch" in sentence.lower():
         msg = "Is it on the PCard?"    
