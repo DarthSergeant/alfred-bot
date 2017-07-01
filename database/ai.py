@@ -41,7 +41,7 @@ def create_response(sentence):
 
     return msg
 
-res_hall_num = {
+data = {
           'hy' : os.getenv('HY'),
           'bus' : os.getenv('BUS'),
           'ttw' : os.getenv('TTW'),
