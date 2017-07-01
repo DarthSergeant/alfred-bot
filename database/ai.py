@@ -1,17 +1,16 @@
-import random
 import os
+import random
 from database.cat_facts import catfacts
 
 def create_response(sentence):
     msg = {}
     #Residence Halls
     if sentence == "!hy":
-        HY = PACK
-        msg = PACK
+        msg = HY
     if sentence == "!bus":
         msg = "Buskirk"
     if sentence == "!ttw":
-        msg = str(TTW)
+        msg = TTW
     if sentence == "!tte":
         msg = TTE
     if sentence == "!FYN":
@@ -36,9 +35,10 @@ def create_response(sentence):
     if "lunch" in sentence.lower():
         msg = "Is it on the PCard?"    
     if "dinner" in sentence.lower():
-        msg = "Is it on the PCard?"
-       
+        msg = "Is it on the PCard?"   
     if "dorm" in sentence.lower():
         msg = "*Residence Hall"
+    if "var" in sentence.lower():
+        msg = VAR
 
     return msg
