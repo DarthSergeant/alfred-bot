@@ -2,6 +2,8 @@ import os
 import random
 from database.cat_facts import catfacts
 
+VAR = stupid
+
 def create_response(sentence):
     msg = {}
     #Residence Halls
@@ -39,6 +41,6 @@ def create_response(sentence):
     if "dorm" in sentence.lower():
         msg = "*Residence Hall"
     if "var" in sentence.lower():
-        msg = VAR
+        msg = stupid
 
     return msg
