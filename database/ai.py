@@ -2,7 +2,7 @@ import os
 import random
 from database.cat_facts import catfacts
 
-VAR = stupid
+stupid = VAR
 
 def create_response(sentence):
     msg = {}
