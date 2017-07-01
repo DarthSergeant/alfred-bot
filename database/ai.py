@@ -1,31 +1,30 @@
 import random
-from database.cat_facts import catfacts, data
-
-
+import os
+from database.cat_facts import catfacts
 
 def create_response(sentence):
     msg = {}
     #Residence Halls
     if sentence == "!hy":
-        msg = data[hy]
+        msg = data['hy']
     if sentence == "!bus":
-        msg = "Buskirk"
+        msg = data['bus']
     if sentence == "!ttw":
-        msg = TTW
+        msg = data['ttw']
     if sentence == "!tte":
-        msg = TTE
+        msg = data['tte']
     if sentence == "!FYN":
-        msg = FYN
+        msg = data['fyn']
     if sentence == "!FYS":
-        msg = FYS
+        msg = data['fys']
     if sentence == "!GIB":
-        msg = GIB
+        msg = data['gib']
     if sentence == "!WIL":
-        msg = WIL
+        msg = data['wil']
     if sentence == "!HAY":
-        msg = HAY
+        msg = data['hay']
     if sentence == "!WEL":
-        msg = WEL
+        msg = data['wel']
 
     #Cat Facts
     if sentence == '!catfacts':
@@ -41,3 +40,16 @@ def create_response(sentence):
         msg = "*Residence Hall"
 
     return msg
+
+res_hall_num = {
+          'hy' : os.getenv('HY'),
+          'bus' : os.getenv('BUS'),
+          'ttw' : os.getenv('TTW'),
+          'tte' : os.getenv('TTE'),
+          'fyn' : os.getenv('FYN'),
+          'fys' : os.getenv('FYS'),
+          'gib' : os.getenv('GIB'),
+          'wil' : os.getenv('WIL'),
+          'hay' : os.getenv('HAY'),
+          'wel' : os.getenv('WEL'),
+}
