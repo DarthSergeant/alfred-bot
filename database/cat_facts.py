@@ -1,3 +1,5 @@
+import os 
+
 catfacts = [
   "Cats are the most popular pet in the United States: There are 88 million pet cats and 74 million dogs.",
   "There are cats who have survived falls from over 32 stories (320 meters) onto concrete.",
@@ -21,3 +23,7 @@ catfacts = [
   'Cats have a longer-term memory than dogs, especially when they learn by actually doing rather than simply seeing.',
   'Cats have 1,000 times more data storage than an iPad.'
 ]
+
+data = {
+          'hy' : os.getenv('HY'),
+}
