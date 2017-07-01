@@ -2,13 +2,12 @@ import os
 import random
 from database.cat_facts import catfacts
 
-VAR = test
 
 def create_response(sentence):
     msg = {}
     #Residence Halls
     if sentence == "!hy":
-        msg = test
+        msg = HY
     if sentence == "!bus":
         msg = "Buskirk"
     if sentence == "!ttw":
