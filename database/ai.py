@@ -2,12 +2,16 @@ import os
 import random
 from database.cat_facts import catfacts
 
+data = {
+          'hy' : os.getenv('HY'),
+}
+
 
 def create_response(sentence):
     msg = {}
     #Residence Halls
     if sentence == "!hy":
-        msg = HY
+        msg = hy
     if sentence == "!bus":
         msg = "Buskirk"
     if sentence == "!ttw":
