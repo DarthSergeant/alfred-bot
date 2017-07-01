@@ -13,17 +13,17 @@ def create_response(sentence):
         msg = data['ttw']
     if sentence == "!tte":
         msg = data['tte']
-    if sentence == "!FYN":
+    if sentence == "!fyn":
         msg = data['fyn']
-    if sentence == "!FYS":
+    if sentence == "!fys":
         msg = data['fys']
-    if sentence == "!GIB":
+    if sentence == "!gib":
         msg = data['gib']
-    if sentence == "!WIL":
+    if sentence == "!wil":
         msg = data['wil']
-    if sentence == "!HAY":
+    if sentence == "!hay":
         msg = data['hay']
-    if sentence == "!WEL":
+    if sentence == "!wel":
         msg = data['wel']
 
     #Cat Facts
