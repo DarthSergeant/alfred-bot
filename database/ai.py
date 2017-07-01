@@ -2,13 +2,13 @@ import os
 import random
 from database.cat_facts import catfacts
 
-stupid = VAR
+VAR = test
 
 def create_response(sentence):
     msg = {}
     #Residence Halls
     if sentence == "!hy":
-        msg = HY
+        msg = test
     if sentence == "!bus":
         msg = "Buskirk"
     if sentence == "!ttw":
@@ -40,7 +40,5 @@ def create_response(sentence):
         msg = "Is it on the PCard?"   
     if "dorm" in sentence.lower():
         msg = "*Residence Hall"
-    if "var" in sentence.lower():
-        msg = stupid
 
     return msg
