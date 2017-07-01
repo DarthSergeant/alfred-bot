@@ -1,5 +1,5 @@
 import random
-from database.cat_facts import catfacts, res_hall_num
+from database.cat_facts import catfacts, data
 
 
 
