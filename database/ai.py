@@ -1,10 +1,6 @@
-import os
 import random
-from database.cat_facts import catfacts
+from database.cat_facts import catfacts, res_hall_num
 
-data = {
-          hy : os.getenv('HY'),
-}
 
 
 def create_response(sentence):
