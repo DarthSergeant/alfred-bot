@@ -11,7 +11,7 @@ def create_response(sentence):
     msg = {}
     #Residence Halls
     if sentence == "!hy":
-        msg = hy
+        msg = data['hy']
     if sentence == "!bus":
         msg = "Buskirk"
     if sentence == "!ttw":
