@@ -5,7 +5,7 @@ from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 from flask import Flask, request
 
-from database.ai import create_response
+from database.ai import post_response
 
 app = Flask(__name__)
 
@@ -13,11 +13,14 @@ app = Flask(__name__)
 def webhook():
   data = request.get_json()
   log('Recieved {}'.format(data))
-  parse = data['text']
-  sentence = parse.lower()
-  response = create_response(sentence)
+  raw_name = data['name']
+  raw_text = data['text']
+  #This saves the lowercase version as something else
+  name = raw_name.lower()
+  text = raw_text.lower()
+  response = post_response(name, text)
   if response:
-    if data['name'] != "Marco Bot":
+    if name != "Alfred":
       send_message(response)
   return "ok", 200
 
