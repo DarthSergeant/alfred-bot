@@ -3,6 +3,16 @@ import os
 from database.cat_facts import catfacts
 from database.office_hours import *
 
+"""##########################
+# Temporary 8 Ball
+##########################"""
+eight_ball = ['It is certain', ' It is decidedly so', 'Without a doubt', 'Yes definitely', 'You may rely on it'
+              'As I see it, yes', 'Most likely', 'Outlook good', 'Yes', 'Signs point to yes',
+              'Reply hazy try again', 'Ask again later', 'Better not tell you now', 'Cannot predict now',
+              'Concentrate and ask again', 'Dont conunt on it', 'My reply is no', 'My sources say no',
+              'Outlook not so good', 'Very doubtful']
+
+    
 class Rd:
     def __init__(self, office_number, phone_number, email, monday, tuesday, wednesday, thursday, friday):
 
@@ -73,10 +83,13 @@ def post_response(text):
     return(determine_if_active(text))
        
 def determine_if_active(text):
-    if any(word in text for word in question_words): #Check if question
-        if any(word in text for word in name_search): #Check if they're asking about person
-            if any(word in text for word in type_search): #Check that  they're looking for something in there is info on
-                return(response_type(text))
+    if '!8ball' in text:
+        num = random.randint(0, (len(eight_ball)-1))
+        return(eight_ball[num])
+    #if any(word in text for word in question_words): #Check if question
+     #   if any(word in text for word in name_search): #Check if they're asking about person
+      #      if any(word in text for word in type_search): #Check that  they're looking for something in there is info on
+       #         return(response_type(text))
     
 def response_type(text):
     #You can't enter type as second half of statement on next line, so each must be written individualy
