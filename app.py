@@ -5,7 +5,7 @@ from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 from flask import Flask, request
 
-from bot_core.bot_core import post_response
+from bot_core.ai import post_response
 
 app = Flask(__name__)
 
