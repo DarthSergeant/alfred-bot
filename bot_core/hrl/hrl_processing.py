@@ -8,6 +8,8 @@ touching anything in the hrl file except for this exported response.
 """##########################
 # Imports
 ##########################"""
+import os
+
 from hrl.information_processing import delegate_message
 
 """##########################
