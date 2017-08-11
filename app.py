@@ -21,6 +21,7 @@ def webhook():
   response = post_response(text)
   if response:
     if name != "Alfred":
+      send_message(name)
       send_message(response)
   return "ok", 200
 
