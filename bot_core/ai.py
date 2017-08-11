@@ -8,7 +8,7 @@ from hrl.hrl_processing import export_hrl_response
 ##########################"""
 #create a function to determine which database to read from
 def post_response(text):
-        return(export_hrl_response(text))
+        #return(export_hrl_response(text))
 	if "test" in text:
 		return("Aye")
 	
