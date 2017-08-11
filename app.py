@@ -20,7 +20,7 @@ def webhook():
   text = raw_text.lower()
   response = post_response(text)
   if response:
-    if name != "Alfred":
+    if name != "Alfred Bot":
       send_message(response)
   return "ok", 200
 
