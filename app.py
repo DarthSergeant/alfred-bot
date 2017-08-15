@@ -7,6 +7,7 @@ from flask import Flask, request
 
 #from bot_core.ai import post_response
 from outer.cat2 import post_response
+global TEXT
 
 app = Flask(__name__)
 
@@ -19,6 +20,7 @@ def webhook():
   #This saves the lowercase version as something else
   name = raw_name.lower()
   text = raw_text.lower()
+  TEXT = text 
   response = post_response(text)
   if response:
     if name != "alfred bot":
